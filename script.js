@@ -78,27 +78,14 @@ window.onload = function () {
   });
 
   // ===== SORTING =====
-document.getElementById('sortName').addEventListener('click', () => {
-  const direction = sortOrder.name;
-
-  currentCountries.sort((a, b) => {
-    if (direction === 'asc') {
-      return a.name.common.localeCompare(b.name.common);
-    } else {
-      return b.name.common.localeCompare(a.name.common);
-    }
+  document.getElementById('sortName').addEventListener('click', () => {
+    const direction = sortOrder.name;
+    currentCountries.sort((a, b) => direction === 'asc' ? a.name.common.localeCompare(b.name.common) : b.name.common.localeCompare(a.name.common));
+    sortOrder.name = direction === 'asc' ? 'desc' : 'asc';
+    updateSortArrows('name', sortOrder.name);
+    renderCountries(currentCountries);
+    drawPopulationGraph(currentCountries, 'population');
   });
-
-  if (direction === 'asc') {
-    sortOrder.name = 'desc';
-  } else {
-    sortOrder.name = 'asc';
-  }
-
-  updateSortArrows('name', sortOrder.name);
-  renderCountries(currentCountries);
-  drawPopulationGraph(currentCountries, 'population');
-});
 
   document.getElementById('sortCapital').addEventListener('click', () => {
     const direction = sortOrder.capital;
