@@ -2,7 +2,7 @@
   scroll-behavior: smooth;
 }
 
-   /* Base Styling *//* Base Styling */
+   /* Base Styling */
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f9f9fb;
@@ -135,9 +135,7 @@ button .arrow {
 
 #graph-bars {
   margin-top: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
+  padding: 0 30px 30px;
 }
 
 .graph-bar {
@@ -145,28 +143,6 @@ button .arrow {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.graph-bar-name {
-  width: 120px;
-  font-weight: bold;
-  font-size: 14px;
-  color: #374151;
-}
-
-.graph-bar-bar {
-  flex: 1;
-  height: 20px;
-  background-color: #fcd34d;
-  margin: 0 12px;
-  border-radius: 4px;
-}
-
-.graph-bar-value {
-  font-size: 14px;
-  min-width: 60px;
-  text-align: right;
-  color: #555;
 }
 
 /* Back to Top Button */
