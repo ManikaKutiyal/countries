@@ -1,0 +1,52 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>World Countries Data</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+ 
+</head>
+<body>
+    
+  <div id="header" style="text-align: center; margin-top: 30px;">
+  <h1>World Countries Data</h1>
+  <h2 id="mainHeading">Currently, we have 0 countries</h2>
+  <h3 id="subHeading"></h3>
+  <button id="themeToggle" class="icon-btn" aria-label="Toggle Theme">
+  <i id="themeIcon" class="fas fa-toggle-off"></i>
+</button>
+
+</div>
+
+  <div style="text-align:center; margin-top: 20px;">
+  <input type="text" id="searchInput" placeholder="Search countries by name, capital, or language" style="padding: 10px; width: 300px; font-size: 16px;"/>
+</div>
+<div class="button-container">
+  <button id="sortName"><b>Sort by Name</b><span class="arrow"></span></button>
+  <button id="sortCapital"><b>Sort by Capital</b><span class="arrow"></span></button>
+  <button id="sortPopulation"><b>Sort by Population</b><span class="arrow"></span></button>
+  <button id="showGraphBtn" class="icon-btn" title="Show Graph">
+    <i class="fa fa-bar-chart"></i>
+  </button>
+</div>
+
+</div>
+  <div id="countries-container"></div>
+<div id="population-graph" style="margin: 40px auto; max-width: 800px; padding: 10px;">
+  <h2 style="text-align:center;">World Stats</h2>
+  <div style="text-align:center; margin-bottom: 20px;">
+    <button id="btnPopulation">Population</button>
+    <button id="btnLanguages">Languages</button>
+  </div>
+  <div id="graph-bars"></div>
+</div>
+<button id="backToTop">
+  ⬆ Top
+</button>
+
+
+  <script src="script.js" defer></script>
+</body>
+</html>
