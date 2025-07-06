@@ -1,0 +1,284 @@
+    html {
+  scroll-behavior: smooth;
+}
+
+   /* Base Styling *//* Base Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9fb;
+  margin: 0;
+  padding: 0;
+  color: #2c3e50;
+}
+
+/* Header Section */
+#header {
+  text-align: center;
+  background-color: #2c3e50;
+  color: #fefefe;
+  padding: 40px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#header h1 {
+  margin: 0;
+  font-size: 36px;
+  letter-spacing: 0.5px;
+  color: #fcd34d;
+}
+
+#mainHeading {
+  font-size: 22px;
+  margin-top: 8px;
+}
+
+#subHeading {
+  color: #c0bebe;
+  font-size: 20px;
+  font-style: italic;
+}
+
+/* Search Bar */
+#searchInput {
+  padding: 12px 16px;
+  width: 320px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 50px; /* pill shape */
+  margin-top: 10px;
+  transition: border-color 0.3s ease;
+}
+
+#searchInput:focus {
+  border-color: #fcd34d;
+  outline: none;
+}
+
+/* Button Styling */
+button:not(.icon-btn) {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  border: none;
+  border-radius: 50px; /* pill shape */
+  background-color: #facc15; /* soft yellow */
+  color: #1f2937; /* dark text */
+  cursor: pointer;
+  margin: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  font-style: italic;
+}
+
+button:hover:not(.icon-btn){
+  background-color: #fcd34d; /* brighter yellow on hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  color: #ffffff;
+}
+
+button:focus:not(.icon-btn) {
+  outline: none;
+}
+
+button .arrow {
+  margin-left: 6px;
+  font-weight: bold;
+}
+
+/* Country Cards */
+#countries-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px;
+  justify-content: center;
+}
+
+.country-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  width: 240px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.country-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.country-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Graph Section */
+#population-graph {
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  margin: 50px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+#population-graph h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #2c3e50;
+}
+
+#graph-bars {
+  margin-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+.graph-bar {
+  margin: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.graph-bar-name {
+  width: 120px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #374151;
+}
+
+.graph-bar-bar {
+  flex: 1;
+  height: 20px;
+  background-color: #fcd34d;
+  margin: 0 12px;
+  border-radius: 4px;
+}
+
+.graph-bar-value {
+  font-size: 14px;
+  min-width: 60px;
+  text-align: right;
+  color: #555;
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #fcd34d;
+  color: #2c3e50;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+
+}
+  
+
+#backToTop:hover {
+  background-color: #fbbf24;
+}
+.icon-btn {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 0;
+  margin-left: 10px;
+  font-size: 36px;
+  color: #facc15;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+  
+}
+
+.icon-btn:hover {
+  color: #facc15;
+  transform: scale(1.2);
+}
+
+.icon-btn:focus {
+  outline: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* spacing between buttons */
+  margin: 20px;
+  flex-wrap: wrap; /* optional, for responsiveness */
+}
+body.dark-mode {
+  background-color: #1f2937;
+  color: #f3f4f6;
+}
+
+body.dark-mode #header {
+  background-color: #111827;
+  color: #fefefe;
+}
+
+body.dark-mode #header h1 {
+  color: #fde68a;
+}
+
+body.dark-mode #subHeading {
+  color: #9ca3af;
+}
+
+body.dark-mode .country-card {
+  background: #374151;
+  color: #fefefe;
+}
+
+body.dark-mode .graph-bar-bar {
+  background-color: #fde68a;
+}
+
+body.dark-mode button:not(.icon-btn) {
+  background-color: #fbbf24;
+  color: #111827;
+}
+body.dark-mode button:not(.icon-btn):hover {
+  background-color: #fbbf24;
+  color: #ffffff;
+}
+
+body.dark-mode #population-graph {
+  background-color: #373f4b;
+  color: #f3f4f6;
+}
+
+body.dark-mode #population-graph h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+
+
+body.dark-mode .graph-bar-value {
+  color: #d1d5db;
+}
+
+body.dark-mode #backToTop {
+  background-color: #fbbf24;
+  color: #111827;
+}
+
+
+
